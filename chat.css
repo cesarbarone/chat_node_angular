@@ -1,0 +1,15 @@
+.container{
+	width: 500px;
+	height: 500px;
+	margin: 0 auto;
+}
+
+#room{
+	border: 1px solid black;
+	height: inherit;
+	overflow-y: auto;
+}
+
+#input_message_field{
+	width: 500px;
+}

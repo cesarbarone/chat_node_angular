@@ -1,0 +1,20 @@
+<!doctype html>
+<html ng-app>
+    <head>
+        <script src="http://localhost:8080/socket.io/socket.io.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+        <script src="chat_controller.js"></script>
+        <link rel="stylesheet" href="chat.css">
+    </head>
+    <body>
+        <div ng-controller="ChatController" class="container">
+            <div id="room">
+                  <p ng-repeat="message in messages">{{message.text}}</p>
+            </div>            
+            <form ng-submit="send_message()">
+                <input type="text" ng-model="message" id="input_message_field" placeholder="Digite uma mensagem"></input>
+                <input type="submit" value="Send">
+            </form>
+        </div>
+    </body>
+</html>
